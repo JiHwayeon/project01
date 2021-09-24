@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Swiper demo</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
+    />
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+   
+   <style>
+     /* css 애니메이션 조금 디테일하게 작업하면 좋겠네요 */
+     .sec{
+        opacity: 0; 
+        transform: translateY(50px);
+        transition: all 0.5s;
+        transition-delay: 0.5s; }
+     .sec.on{
+       opacity: 1; transform: translateY(0);
+      }
+      .sec02{
+        opacity: 0; 
+        transform: translateY(50px);
+        transition: all 0.5s;
+        transition-delay: 0.5s; }
+     .sec02.on{
+       opacity: 1; transform: translateY(0);
+      }
+      .sec03{
+        opacity: 0; 
+        transform: translateY(50px);
+        transition: all 0.5s;
+        transition-delay: 0.5s; }
+     .sec03.on{
+       opacity: 1; transform: translateY(0);
+      }
+   </style>
+   
+  
+  </head>
+
+  <body>
+    <header id="header">
+      <h1><a href="#"><img src="img/logo.png" alt=""></a></h1>
+      <a href="#" class="open1"><span>왼쪽메뉴열기</span></a>
+
+      <div class="leftWrap">
+        <a href="#" class="close1">닫기</a>
+        <div>
+          <ul class="menuWrap clear">
+            <li><a href="#">회사개요</a>
+            <ul class="subMenu">
+              <li><a href="#">회사소개</a></li>
+              <li><a href="#">경영실적</a></li>
+              <li><a href="#">윤리경영</a></li>
+              <li><a href="#">사회공헌활동</a></li>
+            </ul>
+            </li>
+            <li><a href="#">제품</a>
+              <ul class="subMenu">
+                <li><a href="#">제품소개</a></li>
+                <li><a href="#">인증현황</a></li>
+                <li><a href="#">환경안전보건</a></li>
+                <li><a href="#">공정소개</a></li>
+              </ul>
+            </li>
+            <li><a href="#">홍보센터</a>
+              <ul class="subMenu">
+                <li><a href="#">What's New</a></li>
+                <li><a href="#">사보-철맥</a></li>
+                <li><a href="#">광고 갤러리</a></li>
+              </ul>
+            </li>
+            <li><a href="#">네트워크</a>
+              <ul class="subMenu">
+                <li><a href="#">영업망 안내</a></li>
+                <li><a href="#">찾아오시는 길</a></li>
+                <li><a href="#">Q &amp; A</a></li>
+                <li><a href="#"></a></li>
+              </ul>
+            </li>
+            <li><a href="#">인재채용</a>
+              <ul class="subMenu">
+                <li><a href="#">인재상</a></li>
+                <li><a href="#">인사제도</a></li>
+                <li><a href="#">채용공고</a></li>
+                <li><a href="#">입사지원서</a></li>
+              </ul>
+            </li>
+            <li><a href="#">사이버감사실</a></li>
+            <li><a href="#">사회복지재단</a></li>
+
+          </ul>
+        </div>
+      </div>
+      
+      
+    </header>
+    <!-- Swiper -->
+    <div class="swiper mySwiper01">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide first">
+          <div class="txtWrap">
+            <h2>새로운 가치를 창조하여 풍요로운 사회를 만듭니다.</h2>
+            <p>"Always New YK Steel."</p>
+            <a href="http://www.yk-steel.co.kr/">View More</a>
+          </div>
+         
+          <img src="img/sub_visual03.jpg" alt="이미지에 대한 설명">
+        
+        </div>
+        <div class="swiper-slide pro">
+           <img src="img/sky.jpg" alt="이미지에 대한 설명"> 
+           <div class="txtWrap">
+             <p class="tit">Product</p>
+             <p class="subc">표면에 축방향의 돌기와 횡방향으로 일정한 간<br>격의
+               마디가 있어 콘크리트부착력이 뛰어나 토<br>목 및 건축구조용
+                자재로 널리 쓰이고 있습니다.</p>
+                <a href="#">View More</a>
+           </div>
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <a href="#"><img src="img/steel_08.jpg" alt=""></a>
+              </div>
+            
+              <div class="swiper-slide">
+                <a href="#"><img src="img/Bc-unsplash.jpg" alt=""></a>
+              </div>
+              <div class="swiper-slide">
+                <a href="#"><img src="img/steel02.jpg" alt=""></a>
+              </div>
+              <div class="swiper-slide">
+                <a href="#"><img src="img/Y-unsplash.jpg" alt=""></a>
+              </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+           
+          </div>
+      
+        
+
+        </div>
+        
+        
+        <div class="swiper-slide con"><!-- 여기도착하면 swiper-slide-active 클래스가 추가되거든요
+        그걸 응용해서 addClass로 css 애니메이션 처리하는게 좋을꺼 같아요 .
+      아래 스크립트랑 위에 css 참고해서 디테일하게 조절해요-->
+
+          <div class="sec">
+            <h2>Company</h2>
+            <div><a href="#"><h3>경영실적</h3><img src="img/company_images_03.jpg" alt=""></a></div>
+            <div><a href="#"><h3>윤리경영</h3><img src="img/company_images_05.jpg" alt=""></a></div>
+            <div><a href="#"><h3>사회공헌활동</h3><img src="img/company_images_07.jpg" alt=""></a></div>
+          </div>
+          
+        </div>
+        <div class="swiper-slide recruit">
+          <div class="bg_r"></div>
+          <img src="img/ablt_img1_1.jpg" alt="이미지에 대한 설명">
+          <div class="sec02">
+            <div><h2>Recruit</h2></div>
+            <div class="border_right"><a href="#" class="re"><h3>채용공고</h3><img src="img/recruit_01.png" alt=""><span>View More</span></a></div>
+            <div><a href="#" class="re"><h3>인사제도</h3><img src="img/recruit_02.png" alt=""><span>View More</span></a></div>
+            <div><a href="#" class="re"><h3>입사지원</h3><img src="img/recruit_03.png" alt=""><span>View More</span></a></div>
+          </div>
+          
+
+          
+        </div>
+        <div class="swiper-slide last">
+          <div class="bg"></div>
+          <img src="img/main_f_bg.png" alt="이미지에 대한 설명" class="lastimg">
+          <div class="sec03">
+            <div><h2>Support</h2></div>
+            <div><a href="#" class="re"><h3>Consultant</h3><img src="img/consultant.png" alt=""><span>View More</span></a></div>
+            <div><a href="#" class="re"><h3>Business</h3><img src="img/e_business.png" alt=""><span>View More</span></a></div>
+            <div><a href="#" class="re"><h3>Location</h3><img src="img/location.png" alt=""><span>View More</span></a></div>
+          </div>
+          <footer class="footer">
+            <div class="inner">
+              <h4><a href="#"><img src="img/logo_gray.png" alt=""></a></h4>
+              <ul class="clear per">
+                <li><a href="#">개인정보방침</a></li>
+                <li><a href="#">이메일수집거부</a></li>
+                <li><a href="#">사이트맵</a></li>
+                <li><a href="#">찾아오시는 길</a></li>
+              </ul>
+              <p class="tel"><span>TEL:051-260-2114</span><span>FAX:051-262-2294</span></p>
+              <p class="copy">COPYRIGHT(C) YK STEEL CORP. ALL RIGHT RESERVED.</p>
+              <select name="Language">
+                <option value="KO">Ko</option>
+                <option value="EN">En</option>
+                
+              </select>
+              <ul class="sys">
+                <li><a href="#">통합구매시스템</a></li>
+                <li><a href="#">방문예약시스템</a></li>
+                <li><a href="#">공식블로그</a></li>
+                <li><a href="#">관리</a></li>
+
+              </ul>
+            </div>
+          </footer>
+          
+          
+
+        </div>
+        
+        
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <!-- Swiper JS -->
+    <script src="js/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+     
+      var swiper = new Swiper(".mySwiper01", {
+        direction: "vertical",
+        slidesPerView: 1,
+        // spaceBetween: 30,
+        mousewheel: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+          nested: true
+        },
+        //콜백함수 - 슬라이드가 바뀔때마다 체크
+        on: {
+          slideChangeTransitionStart: function () {
+          if($(".swiper-slide.con").hasClass("swiper-slide-active") === true){
+            $(".swiper-slide.con").find(".sec").addClass("on")
+          }else{
+            $(".swiper-slide.con").find(".sec").removeClass("on")
+          } if($(".swiper-slide.recruit").hasClass("swiper-slide-active") === true){
+            $(".swiper-slide.recruit").find(".sec02").addClass("on")
+          }else{
+            $(".swiper-slide.recruit").find(".sec02").removeClass("on")
+          } if($(".swiper-slide.last").hasClass("swiper-slide-active") === true){
+            $(".swiper-slide.last").find(".sec03").addClass("on")
+          }else{
+            $(".swiper-slide.last").find(".sec03").removeClass("on")
+          }
+          
+
+       
+       
+
+        }}
+      });
+      
+    </script>
+     <!-- <script>
+      var swiperH = new Swiper(".mySwiper", {
+        pagination: {
+          el: ".swiper-pagination.second",
+          dynamicBullets: true,
+        },
+      });
+    </script> -->
+    <script>
+       var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 2,
+        spaceBetween: 30,
+        slidesPerGroup: 2,
+        loop: true,
+        loopFillGroupWithBlank: true,
+     
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
+   
+   <script src="js/script.js"></script>
+   <!-- <script>$(window).fadeThis();</script> -->
+   
+   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+   <script>
+       AOS.init({
+           disable: 'mobile',
+           duration: 600,
+           once: true
+       });
+   </script>
+  </body>
+  
+ 
+</html>
